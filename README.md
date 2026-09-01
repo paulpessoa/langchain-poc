@@ -25,22 +25,22 @@ Este repositório documenta a evolução prática do aprendizado com **LangChain
 ```mermaid
 graph TB
     subgraph "📥 FASE 1: Ingestão de Dados"
-        A["📄 products.csv"] -->|CSVLoader| B["📋 10 Documents"]
-        B -->|RecursiveCharacterTextSplitter| C["📦 10 Chunks"]
+        A["📄 products.csv"] -->|"CSVLoader"| B["📋 10 Documents"]
+        B -->|"RecursiveCharacterTextSplitter"| C["📦 10 Chunks"]
     end
 
     subgraph "🧮 FASE 2: Indexação Vetorial"
-        C -->|OpenAIEmbeddings| D["🔢 Vetores Numéricos (1536 dim)"]
-        D -->|FAISS.from_documents| E["🗄️ Vector Store FAISS (RAM)"]
+        C -->|"OpenAIEmbeddings"| D["🔢 Vetores Numéricos (1536 dim)"]
+        D -->|"FAISS.from_documents"| E["🗄️ Vector Store FAISS (RAM)"]
     end
 
     subgraph "🔍 FASE 3: Busca & Ferramenta"
-        E -->|as_retriever (k=3)| F["🔎 Retriever"]
+        E -->|"as_retriever (k=3)"| F["🔎 Retriever"]
         F --> G["🔧 @tool search_products"]
     end
 
     subgraph "🤖 FASE 4: Agente ReAct"
-        G --> H["🤖 Agente ReAct<br/>create_agent(gpt-4o-mini)"]
+        G --> H["🤖 Agente ReAct<br/>create_agent - gpt-4o-mini"]
         I["❓ Pergunta do Usuário"] --> H
         H -->|"Chama a tool se necessário"| G
         G -->|"Retorna dados reais do catálogo"| H
