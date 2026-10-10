@@ -89,7 +89,7 @@ uv run python main.py
 | **Text Splitters** | `langchain-text-splitters` | Divisão inteligente de textos em chunks com overlap |
 | **Embeddings** | `langchain-openai (text-embedding-3-small)` | Transformação de texto em vetores de 1536 dimensões |
 | **Vector Store** | `faiss-cpu` | Busca por similaridade vetorial em memória (Meta AI) |
-| **LLMs Suportados** | `gpt-4o-mini` / `gemini-2.5-flash` | Modelos de raciocínio e geração da resposta final |
+| **LLMs Suportados** | `gpt-4o-mini` / `gemini-3.8-flash` | Modelos de raciocínio e geração da resposta final |
 | **Schema Validation** | `pydantic` | Validação de tipagem e saídas estruturadas |
 
 ---

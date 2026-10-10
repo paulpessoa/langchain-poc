@@ -559,5 +559,5 @@ Nós usamos o FAISS (em memória), mas existem opções persistentes:
 2. **Multi-tool Agent**: Criar agente com várias tools (busca, cálculo, comparação)
 3. **Streaming**: Usar `agent.stream()` para ver as respostas chegando em tempo real
 4. **Persistência**: Trocar FAISS (RAM) por Chroma ou pgvector (disco/banco)
-5. **Diferentes LLMs**: Testar com Gemini (`model="gemini-2.5-flash"`) e comparar respostas
+5. **Diferentes LLMs**: Testar com Gemini (`model="gemini-3.8-flash"`) e comparar respostas
 6. **Avaliação**: Usar LangSmith para avaliar a qualidade das respostas do RAG
